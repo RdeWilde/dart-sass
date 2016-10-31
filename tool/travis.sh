@@ -22,14 +22,6 @@ dart_sass=`pwd`
 dir=`mktemp -d /tmp/sass-spec-XXXXXXXX`
 cd "$dir"
 
-echo "PATH: $PATH"
-pub run grinder snasphot
-echo "ls"
-ls
-
-echo "ls *"
-ls *
-
 fold "git.sass-spec" \
      git clone git://github.com/sass/sass-spec --branch dart-sass --depth 1
 cd sass-spec

@@ -4,6 +4,9 @@ env:
 - DART_VERSION=1.19.1
 - DART_VERSION=latest
 
+rvm:
+- 2.3
+
 cache:
   directories:
   - $HOME/.pub-cache
