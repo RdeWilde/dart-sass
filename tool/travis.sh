@@ -18,7 +18,6 @@ fold ()
     fi
 }
 
-dart_sass=`pwd`
 dir=`mktemp -d /tmp/sass-spec-XXXXXXXX`
 cd "$dir"
 
@@ -27,6 +26,8 @@ fold "git clone sass-spec" \
 cd sass-spec
 
 fold "bundle install" bundle install --jobs=3 --retry=3
-bundle exec sass-spec.rb --output-style expanded --probe-todo --dart "$dart_sass"
-cd "$dart_sass"
+ls ..
+ls ../build
+bundle exec sass-spec.rb --output-style expanded --probe-todo --dart ..
+cd ..
 rm -rf "$dir"
