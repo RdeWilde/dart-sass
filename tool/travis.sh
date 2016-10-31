@@ -27,7 +27,6 @@ cd sass-spec
 
 fold "bundle install" bundle install --jobs=3 --retry=3
 ls ..
-ls ../build
 bundle exec sass-spec.rb --output-style expanded --probe-todo --dart ..
 cd ..
 rm -rf "$dir"
