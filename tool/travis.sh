@@ -22,6 +22,7 @@ dart_sass=`pwd`
 dir=`mktemp -d /tmp/sass-spec-XXXXXXXX`
 cd "$dir"
 
+echo "PATH: $PATH"
 pub run grinder snasphot
 echo "ls"
 ls
