@@ -5,7 +5,7 @@ env:
 - DART_VERSION=latest
 
 rvm:
-- 2.3
+- 2.3.1
 
 cache:
   directories:
