@@ -23,7 +23,7 @@ dir=`mktemp -d /tmp/sass-spec-XXXXXXXX`
 cd "$dir"
 
 fold "git clone sass-spec" \
-     git clone file:///home/nweiz/code/sass-spec --branch dart-sass --depth 1
+     git clone git://github.com/sass/sass-spec --branch dart-sass --depth 1
 cd sass-spec
 
 fold "bundle install" bundle install --jobs=3 --retry=3
