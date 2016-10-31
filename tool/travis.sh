@@ -22,12 +22,16 @@ dart_sass=`pwd`
 dir=`mktemp -d /tmp/sass-spec-XXXXXXXX`
 cd "$dir"
 
+pub run grinder snasphot
+echo "ls"
+ls
+
+echo "ls *"
+ls *
+
 fold "git.sass-spec" \
      git clone git://github.com/sass/sass-spec --branch dart-sass --depth 1
 cd sass-spec
 
 fold "bundle" bundle install --jobs=3 --retry=3
-ls "$dart_sass"
 bundle exec sass-spec.rb --output-style expanded --probe-todo --dart "$dart_sass"
-cd "$dart_sass"
-rm -rf "$dir"
