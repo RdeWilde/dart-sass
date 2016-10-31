@@ -9,5 +9,6 @@ install:
 - curl -o dart.zip "https://storage.googleapis.com/dart-archive/channels/stable/release/$DART_VERSION/sdk/dartsdk-linux-x64-release.zip"
 - unzip dart.zip
 - export PATH="$PATH:dart-sdk/bin"
+- pub get
 
 script: ./tool/travis.sh
